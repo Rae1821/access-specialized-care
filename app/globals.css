@@ -6,6 +6,8 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+
+  --hero-green: 65, 105, 79;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,15 +15,56 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+
+    --hero-green: 65, 105, 79;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.hero-bg {
+  background-image: url('/hero-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
+}
+
+container {
+  width: 1200px;
+  height: 1000px;
+}
+
+.hero-section .overlay:after {
+  background-color: rgba(65,105,79,.8);
+}
+
+.overlay {
+  position: relative;
+}
+
+.hero-section .overlay::after {
+  position: absolute;
+  right: 600px;
+  left: auto;
+  width: 100vw;
+  height: 1300px;
+  position: absolute;
+  content: '';
+  top: 50%;
+  mix-blend-mode: multiply;
+  transform: translate(0,-30%) skew(-20deg);
+}
+
+
+
+.call-to-action {
+  background-image: url('/cta-img.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 350px;
+}
+
+.cta-overlay {
+  background-color: rgba(65,105,79,.8);
 }

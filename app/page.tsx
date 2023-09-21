@@ -1,113 +1,251 @@
 import Image from 'next/image'
+import Link from 'next/link';
+import { BellIcon } from '@heroicons/react/24/solid';
+import { MapPinIcon } from '@heroicons/react/24/solid';
+import { PhoneIcon } from '@heroicons/react/24/solid';
 
-export default function Home() {
+export default function Page() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main>
+      <section className="hero-section hero-bg relative h-screen w-full">
+        <div className="hero-container h-screen">
+          <div className="overlay ">
+            <h1 className="text-5xl tracking-tight leading-none text-white relative z-10 ml-12 mt-48 font-black w-1/2">Easily manage & dispense your medication systems</h1>
+            <p className="text-white z-20 relative w-1/3 leading-loose ml-12 mt-8 mb-24">We specialize in providing medication packaging needs for nursing homes, assisted living facilities, and special needs facilities</p>
+            <button className="bg-black text-white ml-12 px-6 py-3.5 relative z-10 rounded flex uppercase transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+              <a className="flex" href="tel:4238773568">Call Now
+                <PhoneIcon className="w-6 h-6 ml-4" />
+              </a>
+            </button>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
+      <section className="w-full">
+        <div className="flex justify-center items-center my-32 mx-auto px-8 max-w-7xl">
+          <div className="ml-8 w-1/2">
+            <Image
+              src="/medicine-green-bg.jpg"
+              alt="pills on a green background"
+              width={400}
+              height={500}
+            />
+          </div>
+          <div className="w-2/3 px-8">
+            <p className="font-bold text-2xl mb-8 tracking-tighter">Managing multiple medications for multiple patients in your care can be challenging.</p>
+
+              <p className="leading-loose tracking-wide mb-4 text-lg">Our unique, pre-packaged medication systems are designed to offer you time savings, while using technology dedicated to your patient's saftey.</p>
+
+              <p className="leading-loose tracking-wide text-lg">With medication packs clearly labeled with patient information and medication schedules, our systems help you keep track of when patients need to take a medication and at what time.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Features & Benefits Section */}
+      <section className="pb-64 relative">
+
+        <div className="p-8 bg-stone-200 h-96">
+          <h2 className="text-3xl font-bold text-center tracking-tighter mb-8 pt-4">Features & Benefits</h2>
+        </div>
+
+        <div className="cards-container flex justify-between px-6 absolute top-36">
+          {/* Card */}
+          <div className="card bg-neutral-50 w-1/4 mx-2 px-4 py-6 rounded ">
+            <div className="bg-green-700 w-16 h-16 rounded-full p-2 mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="w-12 h-12 text-white text-center mx-auto">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V13.5zm0 2.25h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V18zm2.498-6.75h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V13.5zm0 2.25h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V18zm2.504-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zm0 2.25h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V18zm2.498-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zM8.25 6h7.5v2.25h-7.5V6zM12 2.25c-1.892 0-3.758.11-5.593.322C5.307 2.7 4.5 3.65 4.5 4.757V19.5a2.25 2.25 0 002.25 2.25h10.5a2.25 2.25 0 002.25-2.25V4.757c0-1.108-.806-2.057-1.907-2.185A48.507 48.507 0 0012 2.25z" />
+              </svg>
+            </div>
+
+            <p className="font-semibold text-xl tracking-tighter text-center">Greater accuracy in medication management</p>
+            <ul>
+              <li className="text-sm flex mt-4 mb-4 justify-start">
+                <span className="text-green-700 mr-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </span>
+                3 Different packing systems to choose from
+              </li>
+              <li className="text-sm flex mt-4 mb-4 justify-start">
+                <span className="text-green-700 mr-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </span>
+                Extensive drug utilization review
+              </li>
+            </ul>
+          </div>
+
+          {/* Card */}
+          <div className="card bg-neutral-100 w-1/4 mx-2 px-4 py-6 rounded">
+            <div className="bg-green-700 w-16 h-16 rounded-full p-2 mx-auto mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="w-12 h-12 text-white text-center">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V13.5zm0 2.25h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V18zm2.498-6.75h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V13.5zm0 2.25h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V18zm2.504-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zm0 2.25h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V18zm2.498-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zM8.25 6h7.5v2.25h-7.5V6zM12 2.25c-1.892 0-3.758.11-5.593.322C5.307 2.7 4.5 3.65 4.5 4.757V19.5a2.25 2.25 0 002.25 2.25h10.5a2.25 2.25 0 002.25-2.25V4.757c0-1.108-.806-2.057-1.907-2.185A48.507 48.507 0 0012 2.25z" />
+                </svg>
+            </div>
+            <p className="font-semibold text-xl tracking-tighter text-center">Ease of patient administration</p>
+            <ul className="mt-6 flex flex-col">
+              <li className="text-sm flex mt-4 mb-4 justify-start">
+                <span className="text-green-700 mr-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </span>
+                  Ability to make immediate prescription changes + same day delivery
+              </li>
+              <li className="text-sm flex mt-4 mb-4 justify-start">
+                <span className="text-green-700 mr-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </span>
+                  Acceptance of all major insurance plans
+              </li>
+            </ul>
+          </div>
+
+          {/* Card */}
+          <div className="card bg-neutral-100 w-1/4 mx-2 px-4 py-6 rounded">
+            <div className="bg-green-700 w-16 h-16 rounded-full p-2 mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="w-12 h-12 text-white text-center">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V13.5zm0 2.25h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V18zm2.498-6.75h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V13.5zm0 2.25h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V18zm2.504-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zm0 2.25h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V18zm2.498-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zM8.25 6h7.5v2.25h-7.5V6zM12 2.25c-1.892 0-3.758.11-5.593.322C5.307 2.7 4.5 3.65 4.5 4.757V19.5a2.25 2.25 0 002.25 2.25h10.5a2.25 2.25 0 002.25-2.25V4.757c0-1.108-.806-2.057-1.907-2.185A48.507 48.507 0 0012 2.25z" />
+              </svg>
+            </div>
+            <p className="font-semibold text-xl tracking-tighter text-center">Tamper proof packaging</p>
+            <ul className="mt-6 flex flex-col">
+              <li className="text-sm flex my-4 leading-relaxed justify-start">
+                <span className="text-green-700 mr-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </span>
+                  State of the art medication packing system that is convenient to manage and accurately dispense
+              </li>
+              <li className="text-sm flex mt-4 mb-4 justify-start">
+                <span className="text-green-700 mr-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </span>
+                  Medication carts, E-Mar system, drug disposal, and more!
+              </li>
+            </ul>
+          </div>
+
+          {/* Card */}
+          <div className="card bg-neutral-100 w-1/4 mx-2 px-4 py-6 rounded">
+            <div className="bg-green-700 w-16 h-16 rounded-full p-2 mx-auto mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="w-12 h-12 text-white text-center">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V13.5zm0 2.25h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V18zm2.498-6.75h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V13.5zm0 2.25h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V18zm2.504-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zm0 2.25h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V18zm2.498-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zM8.25 6h7.5v2.25h-7.5V6zM12 2.25c-1.892 0-3.758.11-5.593.322C5.307 2.7 4.5 3.65 4.5 4.757V19.5a2.25 2.25 0 002.25 2.25h10.5a2.25 2.25 0 002.25-2.25V4.757c0-1.108-.806-2.057-1.907-2.185A48.507 48.507 0 0012 2.25z" />
+                </svg>
+            </div>
+            <p className="font-semibold text-xl tracking-tighter text-center">Utmost convenience</p>
+            <ul className="mt-6 flex flex-col">
+              <li className="text-sm flex mt-4 mb-4 justify-start">
+                <span className="text-green-700 mr-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </span>
+                Fast, local delivery. Licensed in TN & GA
+              </li>
+              <li className="text-sm flex mt-4 mb-4 justify-start">
+                <span className="text-green-700 mr-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </span>
+                On site diabetic fittings and screenings
+              </li>
+              <li className="text-sm flex mt-4 mb-4 justify-start">
+                <span className="text-green-700 mr-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </span>
+                On site vaccinations
+              </li>
+              <li className="text-sm flex mt-4 mb-4 justify-start">
+                <span className="text-green-700 mr-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </span>
+                6 pharmacies on call
+              </li>
+            </ul>
+          </div>
+        </div>
+        {/* Stethescope Icon */}
+      <div className="absolute rotate-45 opacity-20 z-0">
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          src="/stethoscope.svg"
+          alt="Stethoscope"
+          width={300}
+          height={300}
+
         />
       </div>
+      </section>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      {/* Stethescope Icon */}
+      {/* <div className="absolute rotate-45 opacity-20">
+        <Image
+          src="/stethoscope.svg"
+          alt="Stethoscope"
+          width={300}
+          height={300}
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+        />
+      </div> */}
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      {/* Location Section */}
+      <section className="my-24">
+        <div className="wrapper">
+          <h2 className="text-center text-3xl font-semibold tracking-tighter mb-24">Conveniently Located in Hixson, TN</h2>
+          <div className="flex justify-center items-center">
+            <div className="left-side mr-8">
+              {/* Address */}
+              <div className="address-wrapper flex leading-relaxed text-2xl">
+                <MapPinIcon className="w-8 h-8 mt-1 text-green-700" />
+                <div className="address ml-2">
+                  <p className="flex uppercase font-light tracking-wider">4062 Hixson Pike</p>
+                  <p className="uppercase font-light tracking-wider">Chattanooga, TN 37415</p>
+                  <p className="font-bold">(423)877-3568</p>
+                </div>
+              </div>
+              {/* Hours of Operation */}
+              <div className="hours flex mt-24 text-2xl">
+                <BellIcon className="w-8 h-8 mt-1 text-green-700" />
+                <div className="leading-relaxed ml-2">
+                  <p className="flex font-light">Hours of Operation</p>
+                  <p className="font-bold">Mon - Fri | 9am - 5:30pm</p>
+                  <p className="font-bold">Sat | 9am - 2pm</p>
+                </div>
+              </div>
+            </div>
+            {/* Map */}
+            <div className="right-side ml-8">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3263.710900260631!2d-85.26017122428732!3d35.113929172775656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8860601a33a5dc03%3A0x1b637109a7b8c80a!2sAccess%20Family%20Pharmacy!5e0!3m2!1sen!2sus!4v1695228982036!5m2!1sen!2sus" width="600" height="450" style={{ border: "0"}} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="call-to-action cta-overlay bg-blend-multiply flex justify-center items-center">
+        <div className="mx-auto mt-6 w-1/2 py-8">
+        <h2 className="text-3xl font-extrabold tracking-tight text-center text-white">Let Access Specialized Care take your medication management to the next level</h2>
+          <button className="bg-black text-white mx-auto mt-8 px-6 py-3.5 z-10 rounded flex uppercase transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+            <a className="flex" href="tel:4238773568">Call Now
+              <PhoneIcon className="w-6 h-6 ml-4" />
+            </a>
+          </button>
+        </div>
+
+      </section>
     </main>
   )
 }

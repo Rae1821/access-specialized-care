@@ -64,7 +64,7 @@
 }
 
 .call-to-action {
-  background-image: url('/cta-img.jpg');
+  background-image: url('/cta-bg.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -90,8 +90,8 @@
     left: auto;
     bottom: 0;
     width: 100vw;
-    height: 390px;
-    top: 24%;
+    height: 100%;
+    top: 30%;
     mix-blend-mode: multiply;
     transform: translate(0,-30%) skew(-20deg);
     z-index: -1;

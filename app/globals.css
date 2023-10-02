@@ -96,8 +96,8 @@
     transform: translate(0,-30%) skew(-20deg);
     z-index: -1;
   }
-
 }
+
 
 .cta-overlay {
   background-color: rgba(65,105,79,.8);
